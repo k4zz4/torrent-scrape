@@ -1,0 +1,19 @@
+{% block content %}
+	<main class="container signup-section">
+		<div class = "section-content"
+		<h2>Search</h2>
+		<form method="POST" action="/search">
+			{{ form.hidden_tag() }}
+			<div class="form-group">
+				{{ form.search.label }}
+				{% if form.search.errors %}
+					{% for error in form.search.errors %}
+						<p class="error-message">{{ error }}</p>
+					{% endfor %}
+				{% endif %}
+				{{ form.search }}
+			</div>
+			{{ form.submit(class="btn-primary") }}
+		</form>
+	</main>
+{% endblock %}

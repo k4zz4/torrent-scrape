@@ -1,0 +1,11 @@
+{% extends "search.html" %}
+{% block body %}
+  <ul class=entries>
+  {% for item in items %}
+    <li><h2>{{ item }}</h2>
+  {% else %}
+    <li><em>Unbelievable.  No entries here so far</em>
+  {% endfor %}
+  </ul>
+{% endblock %}
+<h1>TEST</h1>
